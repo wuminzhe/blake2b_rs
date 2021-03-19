@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    blake2b_rs (0.1.0)
+    blake2b_rs (0.1.1)
       ffi (= 1.15.0)
 
 GEM
