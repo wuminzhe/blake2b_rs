@@ -1,6 +1,11 @@
-require "bundler/gem_tasks"
-require "rspec/core/rake_task"
+require 'bundler/gem_tasks'
+require 'thermite/tasks'
 
-RSpec::Core::RakeTask.new(:spec)
+Thermite::Tasks.new
 
-task :default => :spec
+task default: %w(thermite:build)
+
+desc 'Run Rust & Ruby testsuites'
+task test: ['thermite:build', 'thermite:test'] do
+
+end

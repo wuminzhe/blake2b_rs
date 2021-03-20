@@ -9,6 +9,7 @@ edition = "2018"
 [dependencies]
 blake2 = "0.9"
 hex = "0.4.3"
+libc = "0.2.90"
 
 [lib]
 crate-type=["dylib"]
