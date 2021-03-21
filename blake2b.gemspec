@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Aki Wu"]
   spec.email         = ["wuminzhe@gmail.com"]
 
-  spec.summary       = %q{Blake2b from rust}
-  spec.description   = %q{Blake2b from rust}
+  spec.summary       = %q{A ruby blake2b gem which using rust blake2 crate}
+  spec.description   = %q{A ruby blake2b gem which using rust blake2 crate}
   spec.homepage      = "https://github.com/wuminzhe/blake2b"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
