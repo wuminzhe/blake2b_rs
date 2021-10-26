@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A ruby blake2b gem which using rust blake2 crate}
   spec.description   = %q{A ruby blake2b gem which using rust blake2 crate}
-  spec.homepage      = "https://github.com/wuminzhe/blake2b"
+  spec.homepage      = "https://github.com/wuminzhe/blake2b_rs"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
@@ -29,5 +29,5 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'thermite', '~> 0'
 
-  spec.add_dependency "ffi", "1.15.0"
+  spec.add_dependency "ffi", "~> 1.0"
 end
