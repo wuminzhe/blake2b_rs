@@ -17,6 +17,7 @@ module Blake2b
   extend FFI::Library
   ffi_lib "#{__dir__}/../target/release/libblake2b." + FFI::Platform::LIBSUFFIX
   attach_function :rust_blake2b, %i[pointer int int], Str
+  attach_function :free, :free_s, [Str], :void
 
   def self.hex(u8a, out_len=32)
     c = FFI::MemoryPointer.new(:int8, u8a.size)

@@ -13,6 +13,16 @@ fn to_u8_vec(pointer: *const u8, len: usize) -> Vec<u8> {
 }
 
 #[no_mangle]
+pub extern "C" fn free_s(s: *mut c_char) {
+    unsafe {
+        if s.is_null() {
+            return;
+        }
+        CString::from_raw(s)
+    };
+}
+
+#[no_mangle]
 pub extern fn rust_blake2b(p: *const u8, len: usize, out_len: usize) -> *mut c_char{
 	let data = to_u8_vec(p, len);
 	let mut hasher = VarBlake2b::new(out_len).unwrap();
